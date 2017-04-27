@@ -1,0 +1,6 @@
+organization=vilchik-elena-github
+projectKey=Prettier-Demo
+serverUrl=https://sonarqube.com
+dashboardUrl=https://sonarqube.com/dashboard/index/Prettier-Demo
+ceTaskId=AVuu5kKhhe72D0A0Y--z
+ceTaskUrl=https://sonarqube.com/api/ce/task?id=AVuu5kKhhe72D0A0Y--z
