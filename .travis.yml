@@ -1,11 +1,17 @@
----
-language: node_js
-node_js:
-  - 4
-  - 6
-  - stable
+dist: trusty
+sudo: required
+
+addons:
+  sonarqube:
+    organization: "vilchik-elena-github" 
+    token:
+      secure: "smCLwi4e2yXmgd5t/EqQni8rb7lQJiNv3rGg/l4AgdVAHfzAoJ7N2ZbVNPZbcxVgp416syAbF8AsUUlVASZMQjNOBk4xa0RGigARFLuZwmYHVQChFM+E9xl2fZ6EmcpBR/gd5M25XhLQ7lEbSCebXLYA0HUDr2SNuJPH0gZcAjPn9K3oyddvFYzXrENLFJkvh/J0V6Lete1RlavF/2jlKJIHwqWrqX9nCwpUpqZVqpNdsaFjnByOJtrRWB8pCNJV0ZUDVGeHjVfVyz32LmmzsOBo+337Mh3XfNeQS5vAHnHmHcxiIGm8n78r8Mrz80bB7vVcEgK5wiM4AdhUiTnJZ88clJYL0i4qOdonwUSENZKMoG6QkfmX0Mm9+wHdMdnbI6HOXVAehRaiO4E9lhZlIzNqdtEhBfUIFQBPgzcxKx9GmReT0+peqpW6Q8tujYn9DfLDgMksjFdWKH1r/nR617UhhZqyCvTiud+mXYJJER+Bw5+niXS7StJoO2WVRXJCrItGaFJlbTu5Br4RF5U9tBrv+iXY9m3DbTFwWe8Q5JTSZjMhDhwgmMOO7ZOxsBhbLCOc+wTdB7ndKWt7446M2Ks28jSQS1cRITAsd8OpIuAWFq7e3ntBdkK7alFj1HWahkKZh6kmlr25J8LWLxoSIHIZfHSlFMfdjcMLtRbDpKc=" 
+jdk:
+  - oraclejdk8
+script:
+  - sonar-scanner
 cache:
-  yarn: true
   directories:
-  - node_modules
-script: npm test -- --runInBand
+    - '$HOME/.sonar/cache'
+      
+
