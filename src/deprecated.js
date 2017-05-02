@@ -10,4 +10,5 @@ const deprecated = {
   }`
 };
 
+deprecated = 42;
 module.exports = deprecated;
